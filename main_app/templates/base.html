@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+    rel="stylesheet"
+  />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>Finch Collector</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="btn logo-box">
+        <a href="/"><img src="../static/img/Iconsmind-Outline-Bird.512.png" alt="Bird-logo"> </a>
+      </div>
+      <div class="nav-links">
+        <a class='btn nav-btn' href="/about/">About</a>
+        <a class='btn nav-btn' href="/finches/">View All Finches</a>
+      </div>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+
+    <footer class="page-footer">
+      <div class="right">
+        All Rights Reserved, &copy; 2021 FinchCollector &nbsp;
+      </div>
+    </footer>
+  </body>
+</html>

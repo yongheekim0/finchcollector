@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<a class='link-back' href="/finches">Back</a>
+<div class="card-container">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ finch.name }}</span>
+      <p>Breed: {{ finch.habitat }}</p>
+      <p>Description: {{ finch.description|linebreaks }}</p>
+      <p>Diet: {{finch.diet}}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
