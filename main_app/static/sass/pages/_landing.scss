@@ -1,0 +1,41 @@
+.landing {
+  position: relative;
+  background-blend-mode: screen;
+  background-image: radial-gradient(
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.5)
+    ),
+    url(../img/finch.avif);
+  background-size: cover;
+  div {
+    margin: auto;
+    text-align: center;
+    h1 {
+      letter-spacing: 0.3rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-top: 1rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &-logo {
+    position: absolute;
+    left: 3rem;
+    top: 3rem;
+    animation: moveInLeft 1s ease-out;
+    img {
+      width: 4rem;
+    }
+  }
+  &-btn {
+    font-size: 1.8rem;
+    background-color: rgba($color-primary-dark, 0.5);
+    animation: moveInBottom 1s ease-out;
+  }
+
+  &-btn:hover {
+    margin: auto;
+    font-size: 1.8rem;
+  }
+}

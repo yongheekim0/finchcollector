@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="add-finch">
+  {% if object %}
+  <h1 class="add-finch__heading">Edit <span>{{object.name}}</span></h1>
+  {% else %}
+  <h1 class="add-finch__heading">Add Finch</h1>
+  {% endif %}
+
+  <form action="" method="POST" class="add-finch__form">
+    <!-- this form submits back to the curren url-->
+    {% csrf_token%}
+    <table>
+      {{form.as_table}}
+    </table>
+    <input type="submit" value="Submit" class="btn btn-submit add-finch__btn" />
+  </form>
+</div>
+
+{%endblock%}

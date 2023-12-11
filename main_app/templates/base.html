@@ -17,15 +17,16 @@
   </head>
   <body>
     <header class="header">
-      <div class="btn logo-box">
+      <div class="btn header__logo-box">
         <a href="/"><img src="../static/img/Iconsmind-Outline-Bird.512.png" alt="Bird-logo"> </a>
       </div>
-      <div class="nav-links">
-        <a class='btn nav-btn' href="/about/">About</a>
-        <a class='btn nav-btn' href="/finches/">View All Finches</a>
+      <div class="header__nav-links">
+        <a class='btn nav-btn' href="{% url 'about' %}">About</a>
+        <a class='btn nav-btn' href="{% url 'finches_create' %}">Add New Finch</a>
+        <a class='btn nav-btn' href="{% url 'index' %}">View All Finches</a>
       </div>
     </header>
-    <main>{% block content %} {% endblock %}</main>
+    <main class="main">{% block content %} {% endblock %}</main>
 
     <footer class="page-footer">
       <div class="right">

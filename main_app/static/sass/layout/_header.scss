@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: $color-primary;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  > * {
+    position: absolute;
+    top: 1.5rem;
+    font-size: 1.6rem;
+  }
+  &__logo-box {
+    left: 2rem;
+    top: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: $color-primary-light;
+    animation: moveInLeft 1s ease-out;
+    img {
+      width: 4rem;
+    }
+  }
+  &__nav-links {
+    animation: moveInRight 1s ease-out;
+    animation-fill-mode: backwards;
+    right: 2rem;
+  }
+}

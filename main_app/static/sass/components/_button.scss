@@ -1,0 +1,54 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.7rem 1rem;
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  &-submit {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background-color: $color-primary-light;
+    border: none;
+    border-radius: 2px;
+  }
+}
+
+.nav-btn {
+  background-color: $color-primary-light;
+}
+
+.link-back {
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 1rem;
+}
